@@ -1,8 +1,8 @@
-package com.throttlelab.simulator.strategy.impl;
+package com.throttle.simulator.strategy.impl;
 
-import com.throttlelab.simulator.models.SimulationRequest;
-import com.throttlelab.simulator.models.SimulationResult;
-import com.throttlelab.simulator.strategy.RateLimitStrategy;
+import com.throttle.simulator.dtos.SimulationRequest;
+import com.throttle.simulator.dtos.SimulationResult;
+import com.throttle.simulator.strategy.RateLimitStrategy;
 
 public class FixedWindowStrategy implements RateLimitStrategy {
 

@@ -1,4 +1,4 @@
-package com.throttlelab.simulator.strategy;
+package com.throttle.simulator.strategy;
 
 public enum StrategyType {
     TOKEN_BUCKET,

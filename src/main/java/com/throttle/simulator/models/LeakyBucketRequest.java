@@ -1,19 +1,20 @@
-//package com.throttlelab.simulator.models;
-//
-//import lombok.Data;
-//import lombok.EqualsAndHashCode;
-//import jakarta.validation.constraints.NotNull;
-//import jakarta.validation.constraints.Min;
-//
-//@Data
-//@EqualsAndHashCode(callSuper = true)
-//public class LeakyBucketRequest extends SimulationRequest {
-//
+package com.throttle.simulator.models;
+
+import com.throttle.simulator.dtos.SimulationRequest;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class LeakyBucketRequest extends SimulationRequest {
+
 //    @NotNull
 //    @Min(1)
-//    private Integer bucketCapacity;
-//
+    private Integer bucketCapacity;
+
 //    @NotNull
 //    @Min(1)
-//    private Integer leakRatePerSecond;
-//}
+    private Integer leakRatePerSecond;
+}

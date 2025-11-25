@@ -1,8 +1,8 @@
-package com.throttlelab.simulator.controllers;
+package com.throttle.simulator.controllers;
 
-import com.throttlelab.simulator.models.SimulationRequest;
-import com.throttlelab.simulator.models.SimulationResult;
-import com.throttlelab.simulator.services.SimulationService;
+import com.throttle.simulator.dtos.SimulationRequest;
+import com.throttle.simulator.dtos.SimulationResult;
+import com.throttle.simulator.services.SimulationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

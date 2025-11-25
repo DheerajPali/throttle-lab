@@ -1,20 +1,28 @@
-package com.throttlelab.simulator.strategy.impl;
+package com.throttle.simulator.strategy.impl;
 
-import com.throttlelab.simulator.models.SimulationRequest;
-import com.throttlelab.simulator.models.SimulationResult;
-import com.throttlelab.simulator.strategy.RateLimitStrategy;
+import com.throttle.simulator.dtos.SimulationRequest;
+import com.throttle.simulator.dtos.SimulationResult;
+import com.throttle.simulator.models.LeakyBucketRequest;
+import com.throttle.simulator.strategy.RateLimitStrategy;
 
 public class LeakyBucketStrategy implements RateLimitStrategy {
 
     private final int bucketCapacity;
     private final int leakRatePerSecond;
     private int currentLoad;
+//    private SimulationRequest req;
 
     public LeakyBucketStrategy(int bucketCapacity, int leakRatePerSecond) {
         this.bucketCapacity = bucketCapacity;
         this.leakRatePerSecond = leakRatePerSecond;
         this.currentLoad = 0;
     }
+//    public LeakyBucketStrategy(LeakyBucketRequest request) {
+//        this.bucketCapacity = request.getBucketCapacity();
+//        this.leakRatePerSecond = request.getLeakRatePerSecond();
+//        this.currentLoad = 0;
+//    }
+
 
     @Override
     public SimulationResult simulate(SimulationRequest request) {
