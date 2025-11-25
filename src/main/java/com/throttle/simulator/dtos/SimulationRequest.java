@@ -1,6 +1,8 @@
 package com.throttle.simulator.dtos;
 
-import com.throttle.simulator.strategy.StrategyType;
+import com.throttle.simulator.models.constants.StrategyType;
+import com.throttle.simulator.models.constants.TrafficProfile;
+import com.throttle.simulator.strategy.RateLimitStrategy;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -25,4 +27,10 @@ public class SimulationRequest {
 
     // Fixed Window / Sliding Window specific
     private Integer windowSizeSeconds;     // optional for strategies that don't use it
+
+    //for traffic profile modification
+//    private TrafficProfile trafficProfile = TrafficProfile.CONSTANT;
+    private TrafficProfile trafficProfile;
+    private Integer durationInSeconds = 10;
+    private Integer periodicIntervalInSeconds;
 }
